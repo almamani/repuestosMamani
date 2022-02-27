@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/estilos.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&family=Titillium+Web:wght@600;700&display=swap"
@@ -56,193 +61,142 @@
     </section>
 
     <div id="griBtnArticulos">
-      <button> <a href="catalogo.html#acoples"> Acoples</a></button>
-      <button><a href="catalogo.html#cadenas">Cadenas de Transmisión</a></button>
-      <button> <a href="catalogo.html#correas"> Correas</a></button>
-      <button> <a href="catalogo.html#crucetas"> Crucetas</button></a>
-      <button> <a href="catalogo.html#coronas"> Coronas y Piñones</a></button>
-      <button><a href="catalogo.html#cuchillas"> Cuchillas</a></button>
+      <div class="container-fluid" id="botones">
+        <a class="btn btn-outline-danger" href="#" role="button">Acoples</a>
+        <a class="btn btn-outline-danger" href="#" role="button">Cadenas de Transmision</a>
+        <a class="btn btn-outline-danger" href="#" role="button">Coronas y Piñones</a>
+        <a class="btn btn-outline-danger" href="#" role="button">Correas</a>
+        <a class="btn btn-outline-danger" href="#" role="button">Crucetas</a>
+        <a class="btn btn-outline-danger" href="#" role="button">Cuchillas</a>
+      </div>
     </div>
 
-    <!--Artículos-->
+    <!------------Artículos--------------->
 
-    <!--Acoples-->
     <section class="articulos">
-      <article class="articulosGen" id="acoples">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Acoples</h3>
-          </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_acoples.jpg" alt="" class="imgContenedor">
-          </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p>Acoples elásticos universales. Embragues y frenos neumáticos industriales.</p>
-            <p>Contamos con:</p>
-            <p> >ACOPLES ELÁSTICOS TIPO "A."</p>
-            <p> >ACOPLES MODELO "P" BANDA PARTIDA</p>
-          </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_gummi.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
-          </div>
-        </div>
-      </article>
-      <!--Cadenas de Transmision-->
-      <article class="articulosGen" id="cadenas">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Cadenas de Transmisión</h3>
-          </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_cadena.jpg" alt="" class="imgContenedor">
-          </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p>> Simples, Dobles, Triples, Cuádruples Tipo ASA</p>
-            <p>>Reforzadas Tipo ASA</p>
-            <p>> Paso Largo</p>
-            <p>> Acarreadores armados para cosechadores de origen USA</p>
+      <div class="container-fluid1">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_acoples.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Acoples</h4>
+              <p class="card-text">Acoples elásticos universales. Embragues y frenos neumáticos industriales.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">> Elásticos tipo "A"</li>
+              <li class="list-group-item">> "P" Banda Partida</li>
+              <li class="list-group-item">> Acoples Industriales</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
 
+            </div>
           </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_drive.jpg" alt=""></div>
-            <div><img src="../img/marca_linkelt.jpg" alt=""></div>
-            <div><img src="../img/marca_zhd.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
-
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_cadena.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Cadenas de Transmisión</h4>
+              <p class="card-text">Cadenas de Transmisión para el Agro y la Industria. Nacionales e Importados.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">> Simples, Dobles, Triples</li>
+              <li class="list-group-item">> Reforzada Tipo Asa</li>
+              <li class="list-group-item">> Paso Largo</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
+            </div>
           </div>
-        </div>
-      </article>
-      <!--Coronas y Piñones-->
-      <article class="articulosGen" id="coronas" class="imgContenedor">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Coronas y Piñones</h3>
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_coronas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Coronas y Piñones</h4>
+              <p class="card-text">Coronas y Piñones para Cadenas de Transmisión de 3/8 a 2".
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">> Piñones Simples</li>
+              <li class="list-group-item">> Piñones Dobles</li>
+              <li class="list-group-item">> Coronas Dentadas</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
+            </div>
           </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_coronas.jpg" alt="" class="imgContenedor">
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_correas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Correas</h4>
+              <p class="card-text">Correas Industriales y Agricolas de todo tipo de medidas.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> >Correas Dentadas</li>
+              <li class="list-group-item"> >Correas Vee-Band</li>
+              <li class="list-group-item"> > Correas Variador</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
+            </div>
           </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p>> PIÑONES SIMPLES</p>
-            <p>> PIÑONES DOBLES </p>
-            <p>> PIÑONES TRIPLES</p>
-            <p>> CORONAS DENTADAS</p>
-            <p>> MAZAS PARA ENGRANAJES</p>
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_crucetas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Crucetas</h4>
+              <p class="card-text">Línea completa de crucetas para el automotor, agro y máquinas viales.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">> Crucetas y Tricetas</li>
+              <li class="list-group-item">> Movimientos Universales</li>
+              <li class="list-group-item">> Crucetas Agrícolas</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
+            </div>
           </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_engranajes1.jpg" alt=""></div>
-            <div><img src="../img/marca_engranajes2.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
-          </div>
-        </div>
-      </article>
-
-      <!--Crucetas-->
-      <article class="articulosGen" id="crucetas">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Crucetas</h3>
-          </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_crucetas.jpg" alt="" class="imgContenedor">
-          </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p>> CRUCETAS</p>
-            <p>> TRICETAS</p>
-            <p>> MOVIMIENTOS UNIVERSALES</p>
-            <p> > CRUCETAS AGRÍCOLAS</p>
-            <p>> CRUCETAS BONDIOLI & PAVESI</p>
-          </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_etma.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
-          </div>
-        </div>
-      </article>
-
-      <!--Correas-->
-      <article class="articulosGen" id="correas">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Correas</h3>
-          </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_correas.jpg" alt="" class="imgContenedor">
-          </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p> > CORREAS DENTADAS</p>
-            <p>> CORREAS SUPER VEE-BAND</p>
-            <p> > CORREAS VARIADOR</p>
-            <p>> CORREAS XDV PARA CORTADORA DE CESPED</p>
-            <p>> CORREAS VARIADOR</p>
-
-          </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_everwear.jpg" alt=""></div>
-            <div><img src="../img/marca_mitsuba.jpg" alt=""></div>
-            <div><img src="../img/marca_carlisle.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
+          <div class="card" style="width: 25rem;">
+            <img src="../img/img_catalogo_cuchillas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Cuchillas</h4>
+              <p class="card-text">El mayor surtido de cuchillas y accesorios para múltiples usos.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">> Para Desmalezadoras</li>
+              <li class="list-group-item">> Para Hieladoras</li>
+              <li class="list-group-item">> Para picadoras</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Voler al Menú>></a>
+            </div>
           </div>
         </div>
-      </article>
-
-      <!--Cuchillas-->
-      <article class="articulosGen" id="cuchillas">
-        <div class="articulosIzq">
-          <div class="titArticulos">
-            <h3>/// Cuchillas</h3>
-          </div>
-          <div class="fotArticulos">
-            <img src="../img/img_catalogo_cuchillas.jpg" alt="" class="imgContenedor">
-          </div>
-        </div>
-        <div class="articulosDer">
-          <div class="textArticulos">
-            <p>> CUCHILLAS Y ACCESORIOS PARA DESMALEZADORAS</p>
-            <p>> CUCHILLAS Y ACCESORIOS PARA HIELADORAS</p>
-            <p>> CUCHILLAS Y ACCESORIOS PARA PICADORAS Y PALAS</p>
-
-          </div>
-          <div class="marcasArticulos">
-            <div><img src="../img/marca_ts.jpg" alt=""></div>
-            <div><a href="catalogo.html#botones"><img src="../img/img_up.jpg" alt=""></a></div>
-          </div>
-        </div>
-      </article>
+      </div>
     </section>
+    <!---------- Pié de Página ---------->
+    <footer>
+      <div class="telefono">
+        <div><img src="../img/img_telefono4.jpg" alt=""></div>
+        <div>0351-4258362</div>
+      </div>
 
-  </main>
-  <!---------- Pié de Página ---------->
-  <footer>
-    <div class="telefono">
-      <div><img src="../img/img_telefono4.jpg" alt=""></div>
-      <div>0351-4258362</div>
-    </div>
+      <div class="whatsaap">
+        <div><img src="../img/img_whatsaap4.jpg" alt=""></div>
+        <div>351-3885829</div>
+      </div>
 
-    <div class="whatsaap">
-      <div><img src="../img/img_whatsaap4.jpg" alt=""></div>
-      <div>351-3885829</div>
-    </div>
+      <div class="direccion4">
+        <div><img src="../img/img_ubicacion4.jpg" alt=""></div>
+        <div>Humberto Primo 785 - Córdoba - Argentina</div>
+      </div>
 
-    <div class="direccion4">
-      <div><img src="../img/img_ubicacion4.jpg" alt=""></div>
-      <div>Humberto Primo 785 - Córdoba - Argentina</div>
-    </div>
-
-    <div class="dataFiscal">
-      <img src="../img/img_data_fiscal.jpg" alt="">
-    </div>
-  </footer>
+      <div class="dataFiscal">
+        <img src="../img/img_data_fiscal.jpg" alt="">
+      </div>
+    </footer>
 </body>
 
 </html>
