@@ -1,46 +1,38 @@
+@charset "UTF-8";
 /*---Reset - Iniciales---*/
-
 html {
   box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 *,
 *,
 ::before,
 *,
 ::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   margin: 0;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 /*---Estilos Comunes---*/
-
 .bg-fondoBar {
-  background-color: #14549a;
-}
+  background-color: #14549a; }
 
 h3 {
   font-family: "Roboto Condensed", sans-serif;
   color: #ff0000;
   padding: 1.5rem;
-  text-align: center;
-}
+  text-align: center; }
 
 ol {
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .imgContenedor {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 header {
   background-color: #cecece;
@@ -51,160 +43,126 @@ header {
   align-items: center;
   justify-content: space-evenly;
   position: sticky;
-  top: 0px;
-}
+  top: 0px; }
 
 .telefono {
-  display: flex;
-}
+  display: flex; }
 
 .whatsaap {
-  display: flex;
-}
+  display: flex; }
 
 footer {
   padding: 1rem;
   background-color: #14549a;
   color: #cecece;
-  font-family: "Roboto Condensed", sans-serif;
-}
+  font-family: "Roboto Condensed", sans-serif; }
 
 /*--- Animación Encabezado ---*/
-
 .cargar {
   animation: carga ease 3s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
+  animation-fill-mode: forwards; }
 
 @keyframes carga {
   0% {
-    opacity: 0;
-  }
-
+    opacity: 0; }
   50% {
-    opacity: 0.5;
-  }
-
+    opacity: 0.5; }
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 /*--- Animación Inicial ---*/
-
 #txtAni1 {
-  color: #fd0002;
+  color: #ff0000;
   text-align: center;
-  grid-area: a1;
-}
+  grid-area: a1; }
 
 #txtAni2 {
   color: #868383;
   text-align: center;
-  grid-area: a2;
-}
+  grid-area: a2; }
 
 #txtAni3 {
-  color: #020459;
+  color: #0e3969;
   text-align: center;
-  grid-area: a3;
-}
+  grid-area: a3; }
 
 #imgAni {
   display: flex;
   justify-content: center;
-  grid-area: b1;
-}
+  grid-area: b1; }
 
 .txtAnimacion1 {
   opacity: 0;
   transform: translateY(3rem);
-  animation: mover 2s ease 0.5s forwards;
-}
+  animation: mover 2s ease 0.5s forwards; }
 
 .txtAnimacion2 {
   opacity: 0;
   transform: translateY(3rem);
-  animation: mover 2s ease 1.5s forwards;
-}
+  animation: mover 2s ease 1.5s forwards; }
 
 .txtAnimacion3 {
   opacity: 0;
   transform: translateY(3rem);
-  animation: mover 2s ease 2.5s forwards;
-}
+  animation: mover 2s ease 2.5s forwards; }
 
 @keyframes mover {
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
 #grillaProductos {
-  display: grid;
-}
+  display: grid; }
 
 /*--- Animación Flip Productos ---*/
-
 .flip-card-1 {
   position: relative;
   cursor: pointer;
   transition: transform 1s ease-in-out;
   perspective: 10rem;
   transform-style: flat;
-  transform-style: preserve-3d;
-}
+  transform-style: preserve-3d; }
 
 .flip-card-1:hover {
-  transform: rotateY(180deg);
-}
+  transform: rotateY(180deg); }
 
 .flip-card-1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50%;
-}
+  object-position: 50%; }
 
 .flip-face {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: visible;
-  backface-visibility: hidden;
-}
+  backface-visibility: hidden; }
 
 .flip-front {
-  transform: rotateY(0deg);
-}
+  transform: rotateY(0deg); }
 
 .flip-back {
-  transform: rotateY(180deg);
-}
+  transform: rotateY(180deg); }
 
 .promocion {
   background-color: #cfd7e7;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .info1 {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 2.3vh;
-}
+  font-size: 2.3vh; }
 
 /*---  Principal Nosotros ---*/
-
 .mainNosotros {
-  background-color: #eceaea;
-}
+  background-color: #eceaea; }
 
 .titPrincipal div {
   width: 100%;
@@ -213,16 +171,13 @@ footer {
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .titPrincipal div h3 {
-  color: white;
-}
+  color: #fff; }
 
 #grillaHistoria {
-  display: grid;
-}
+  display: grid; }
 
 .textoHistoria {
   display: flex;
@@ -230,23 +185,19 @@ footer {
   text-align: justify;
   line-height: 3;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.1vw;
-}
+  font-size: 1.1vw; }
 
 /*---  Principal Catalogo ---*/
 .mainCatalogo {
-  background-color: #f9f9f9;
-}
+  background-color: #f9f9f9; }
 
 #griBtnArticulos {
   margin-top: 10px;
-  display: grid;
-}
+  display: grid; }
 
 /*---  Principal Promociones ---*/
 .mainPromociones {
-  background-color: #eceaea;
-}
+  background-color: #eceaea; }
 
 .promos {
   margin-top: 50px;
@@ -258,60 +209,44 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 1rem;
-}
+  padding: 1rem; }
+
 .promoDestacada {
   margin-top: 30px;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
 /*---  Principal Contacto ---*/
-
 .mainContacto {
-  background-color: #f9f9f9;
-}
+  background-color: #f9f9f9; }
 
 .datosContacto2 {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
+
 /*--- Mobile ----*/
 @media only screen and (max-width: 600px) {
   .direccion {
-    display: none;
-  }
-
+    display: none; }
   .direccion4 {
-    display: flex;
-  }
+    display: flex; }
   h3 {
-    font-size: 6vw;
-  }
-
+    font-size: 6vw; }
   .logo {
     width: 100vw;
-    text-align: center;
-  }
-
+    text-align: center; }
   footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
+    align-items: center; }
   /*--- Principal  Index --- */
-
   .container-fluid {
     width: 100vw;
-    height: auto;
-  }
-
+    height: auto; }
   .container-fluid1 {
     width: 70vw;
     height: auto;
     margin-right: auto;
-    margin-left: auto;
-  }
-
+    margin-left: auto; }
   #grillaAnimacion {
     display: grid;
     padding-top: 1rem;
@@ -322,14 +257,9 @@ footer {
     font-size: 5vw;
     grid-template-columns: 60% 40%;
     grid-template-rows: 33px 33px 33px;
-    grid-template-areas:
-      "a1 b1"
-      "a2 b1"
-      "a3 b1";
+    grid-template-areas: "a1 b1" "a2 b1" "a3 b1";
     margin-left: auto;
-    margin-right: auto;
-  }
-
+    margin-right: auto; }
   #grillaProductos {
     margin-left: auto;
     margin-right: auto;
@@ -337,189 +267,126 @@ footer {
     row-gap: 20px;
     grid-template-columns: 100%;
     grid-template-rows: 180px 180px 180px 180px 180px 180px;
-    grid-template-areas:
-      "foto1"
-      "foto2"
-      "foto3"
-      "foto4"
-      "foto5"
-      "foto6";
-    margin-bottom: 20px;
-  }
-
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
+    margin-bottom: 20px; }
   #promocion2 {
     width: 100%;
-    height: 180px;
-  }
-
+    height: 180px; }
   .info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-  }
-
+    margin-bottom: 20px; }
   /*--- Principal-Nosotros --- */
-
   #titEmpresa div {
-    background-image: url("../img/img_tit_empresa1.jpg");
-  }
-  #titEmpresa div h3 {
-    font-size: 7vw;
-  }
-
+    background-image: url("../img/img_tit_empresa1.jpg"); }
+    #titEmpresa div h3 {
+      font-size: 7vw; }
   #grillaHistoria {
     margin-top: 1rem;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
     row-gap: 20px;
-    background-color: white;
+    background-color: #fff;
     grid-template-columns: 100%;
     grid-template-rows: 220px 300px 220px 300px;
-    grid-template-areas:
-      "a1"
-      "a2"
-      "a3"
-      "a4";
+    grid-template-areas: "a1" "a2" "a3" "a4";
     padding-top: 1rem;
     padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
+    padding-right: 1rem; }
   #fotNosotros1 {
-    grid-area: a1;
-  }
+    grid-area: a1; }
   #txtNosotros1 {
-    grid-area: a2;
-  }
+    grid-area: a2; }
   #fotNosotros2 {
-    grid-area: a3;
-  }
+    grid-area: a3; }
   #txtNosotros2 {
-    grid-area: a4;
-  }
-
+    grid-area: a4; }
   .textoHistoria {
-    font-size: 3.5vw;
-  }
-
+    font-size: 3.5vw; }
   /*--- Principal Catalogo ---*/
   #titCatalogo div {
-    background-image: url("../img/img_tit_catalogo1.jpg");
-  }
-
+    background-image: url("../img/img_tit_catalogo1.jpg"); }
   #titCatalogo div h3 {
-    font-size: 7vw;
-  }
-
+    font-size: 7vw; }
   .articulos {
     background-color: white;
     width: 100vw;
     margin-left: auto;
-    margin-right: auto;
-  }
-
+    margin-right: auto; }
   .articulosGen {
     margin-top: 20px;
     padding: 10px;
     width: 100vw;
     height: 360px;
     display: flex;
-    background-color: white;
-  }
-
+    background-color: white; }
   .articulosIzq {
     display: flex;
     flex-direction: column;
-    width: 30%;
-  }
-
+    width: 30%; }
   .titArticulos {
     display: flex;
     font-size: 14px;
-    justify-content: center;
-  }
-
+    justify-content: center; }
   .fotArticulos {
     display: flex;
-    width: 100%;
-  }
-
+    width: 100%; }
   .articulosDer {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-    width: 70%;
-  }
+    width: 70%; }
   .textArticulos {
     display: flex;
     flex-direction: column;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
     height: 70%;
-    line-height: 3;
-  }
+    line-height: 3; }
   .marcasArticulos {
     display: flex;
     justify-content: space-evenly;
-    height: 5%;
-  }
-
+    height: 5%; }
   /*--- Principal-Promociones --- */
   #titPromociones div {
-    background-image: url("../img/img_tit_promociones1.jpg");
-  }
+    background-image: url("../img/img_tit_promociones1.jpg"); }
   #titPromociones div h3 {
-    font-size: 7vw;
-  }
+    font-size: 7vw; }
   #promoDest {
     width: 100%;
-    height: 160px;
-  }
+    height: 160px; }
   .promosMensuales {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
-  }
-
+    row-gap: 10px; }
   /*--- Principal Contacto ---*/
-
   #titContacto div {
-    background-image: url("../img/img_tit_contacto1.jpg");
-  }
+    background-image: url("../img/img_tit_contacto1.jpg"); }
   #titContacto div h3 {
-    font-size: 7vw;
-  }
-
+    font-size: 7vw; }
   .contacto {
     width: 100%;
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
-  }
+    flex-direction: column; }
   .datosContacto {
     width: 100%;
     background-color: white;
     display: flex;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 16px;
-    color: #566f8d;
-  }
-
+    color: #566f8d; }
   .datosContacto2 {
     display: flex;
-    justify-content: center;
-  }
-
+    justify-content: center; }
   .formulario {
     width: 100%;
     display: flex;
-    justify-content: center;
-  }
-
+    justify-content: center; }
   .form {
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -527,75 +394,53 @@ footer {
     padding-right: 2rem;
     max-width: 650px;
     border-radius: 3px;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-
+    font-family: "Roboto Condensed", sans-serif; }
   .formLabel {
     display: block;
     font-size: 18px;
-    color: #0e3969;
-  }
-
+    color: #0e3969; }
   .formInput {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
-    font-size: 14px;
-  }
-
+    font-size: 14px; }
   .formConsulta {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
     font-size: 14px;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-
+    font-family: "Roboto Condensed", sans-serif; }
   .formSubmit {
     width: 100%;
     font-size: 16px;
     padding: 15px;
     background-color: #0e3969;
-    color: #fff;
-  }
-}
+    color: #fff; } }
 
 /*--- Desktop ----*/
 @media only screen and (min-width: 992px) {
   .direccion {
-    display: flex;
-  }
+    display: flex; }
   h3 {
-    font-size: 1.7vw;
-  }
-
+    font-size: 1.7vw; }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-  }
-
+    align-items: center; }
   .direccion4 {
-    display: flex;
-  }
-
+    display: flex; }
   /*---  Principal Index --- */
-
   .container-fluid {
     width: 41vw;
-    height: auto;
-  }
-
+    height: auto; }
   .container-fluid1 {
     width: 41vw;
     height: auto;
     margin-right: auto;
-    margin-left: auto;
-  }
-
+    margin-left: auto; }
   #grillaAnimacion {
     padding-top: 2rem;
     display: grid;
@@ -606,14 +451,9 @@ footer {
     font-size: 50px;
     grid-template-columns: 60% 40%;
     grid-template-rows: 100px 100px 100px;
-    grid-template-areas:
-      "a1 b1"
-      "a2 b1"
-      "a3 b1";
+    grid-template-areas: "a1 b1" "a2 b1" "a3 b1";
     margin-left: auto;
-    margin-right: auto;
-  }
-
+    margin-right: auto; }
   #grillaProductos {
     width: 1110px;
     margin-left: auto;
@@ -622,69 +462,45 @@ footer {
     column-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px 200px;
-    grid-template-areas:
-      "foto1 foto2 foto3"
-      " foto4 foto5 foto6";
-    margin-bottom: 20px;
-  }
-
+    grid-template-areas: "foto1 foto2 foto3" " foto4 foto5 foto6";
+    margin-bottom: 20px; }
   .info {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-  }
-
+    align-items: center; }
   /*--- Prncipal Nosotros ---*/
-
   #titEmpresa div {
-    background-image: url("../img/img_tit_empresa.jpg");
-  }
-
-  #titEmpresa div h3 {
-    font-size: 2.5vw;
-  }
-
+    background-image: url("../img/img_tit_empresa1.jpg"); }
+    #titEmpresa div h3 {
+      font-size: 2.5vw; }
   #grillaHistoria {
     margin-top: 20px;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: #fff;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 454px 454px;
-    grid-template-areas:
-      "a1 b1"
-      "a2 b2";
+    grid-template-areas: "a1 b1" "a2 b2";
     padding: 1rem;
-    column-gap: 0.7rem;
-  }
-
+    column-gap: 0.7rem; }
   #fotNosotros1 {
-    grid-area: a1;
-  }
+    grid-area: a1; }
   #txtNosotros1 {
-    grid-area: b1;
-  }
+    grid-area: b1; }
   #txtNosotros2 {
-    grid-area: a2;
-  }
+    grid-area: a2; }
   #fotNosotros2 {
-    grid-area: b2;
-  }
+    grid-area: b2; }
   .textoHistoria {
-    font-size: 1.1vw;
-  }
-
+    font-size: 1.1vw; }
   /*--- Principal Catalogo ---*/
   #titCatalogo div {
-    background-image: url("../img/img_tit_catalogo.jpg");
-  }
+    background-image: url("../img/img_tit_catalogo.jpg"); }
   #titCatalogo div h3 {
-    font-size: 2.5vw;
-  }
-
+    font-size: 2.5vw; }
   #griBtnArticulos {
     width: 600px;
     margin-left: auto;
@@ -693,88 +509,60 @@ footer {
     column-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 50px;
-    grid-template-areas:
-      "btn1 btn2 btn3"
-      " btn1 btn2 btn3";
-    margin-bottom: 20px;
-  }
-
+    grid-template-areas: "btn1 btn2 btn3" " btn1 btn2 btn3";
+    margin-bottom: 20px; }
   .articulos {
     background-color: white;
     width: 1000px;
     margin-left: auto;
-    margin-right: auto;
-  }
-
+    margin-right: auto; }
   .articulosGen {
     margin-top: 50px;
     padding: 30px;
     width: 1000px;
     height: 450px;
     display: flex;
-    background-color: white;
-  }
-
+    background-color: white; }
   .articulosIzq {
     display: flex;
-    flex-direction: column;
-  }
-
+    flex-direction: column; }
   .titArticulos {
-    display: flex;
-  }
-
+    display: flex; }
   .fotArticulos {
-    display: flex;
-  }
-
+    display: flex; }
   .articulosDer {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
-  }
+    padding-left: 40px; }
   .textArticulos {
     display: flex;
     flex-direction: column;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;
     height: 80%;
-    line-height: 3;
-  }
+    line-height: 3; }
   .marcasArticulos {
     display: flex;
     justify-content: space-evenly;
-    height: 20%;
-  }
-
+    height: 20%; }
   /*--- Principal Promociones ---*/
   #titPromociones div {
-    background-image: url("../img/img_tit_promociones.jpg");
-  }
+    background-image: url("../img/img_tit_promociones.jpg"); }
   #titPromociones div h3 {
-    font-size: 2.5vw;
-  }
-
+    font-size: 2.5vw; }
   .promosMensuales {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-  }
-
+    justify-content: space-evenly; }
   /*--- Principal Contacto ---*/
   #titContacto div {
-    background-image: url("../img/img_tit_contacto.jpg");
-  }
+    background-image: url("../img/img_tit_contacto.jpg"); }
   #titContacto div h3 {
-    font-size: 2.5vw;
-  }
-
+    font-size: 2.5vw; }
   .formulario {
     width: 60%;
     display: flex;
-    justify-content: center;
-  }
-
+    justify-content: center; }
   .contacto {
     margin-top: 20px;
     margin-left: auto;
@@ -783,17 +571,13 @@ footer {
     flex-direction: row;
     width: 80%;
     justify-content: center;
-    margin-bottom: 1rem;
-  }
-
+    margin-bottom: 1rem; }
   .datosContacto {
     width: 40%;
     display: flex;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 18px;
-    color: #566f8d;
-  }
-
+    color: #566f8d; }
   .form {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -802,35 +586,25 @@ footer {
     background: rgba(6, 60, 95, 0.5);
     max-width: 650px;
     border-radius: 3px;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-
+    font-family: "Roboto Condensed", sans-serif; }
   .formLabel {
     display: block;
     font-size: 18px;
-    color: white;
-  }
-
+    color: white; }
   .formInput {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
-    font-size: 14px;
-  }
-
+    font-size: 14px; }
   .formConsulta {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
     font-size: 14px;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-
+    font-family: "Roboto Condensed", sans-serif; }
   .formSubmit {
     width: 100%;
     font-size: 16px;
-    padding: 15px;
-  }
-}
+    padding: 15px; } }
