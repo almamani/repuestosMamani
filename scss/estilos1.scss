@@ -1,5 +1,6 @@
 /*---Reset - Iniciales---*/
 @import "variables.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 html {
   box-sizing: border-box;
@@ -27,7 +28,12 @@ body {
   background-color: $celesteFondoEnc;
 }
 
-h3 {
+h1 {
+  color: $colorBlanco;
+  font-family: $fuente;
+}
+
+h2 {
   font-family: $fuente;
   color: $colorRojo;
   padding: 1.5rem;
@@ -94,46 +100,15 @@ footer {
 
 /*--- Animación Inicial ---*/
 
-#txtAni1 {
-  color: $colorRojo;
+@mixin formatoAniInicial($color, $area) {
   text-align: center;
-  grid-area: a1;
+  color: $color;
+  grid-area: $area;
 }
 
-#txtAni2 {
-  color: #868383;
-  text-align: center;
-  grid-area: a2;
-}
-
-#txtAni3 {
-  color: $colorAzulOsc;
-  text-align: center;
-  grid-area: a3;
-}
-
-#imgAni {
-  display: flex;
-  justify-content: center;
-  grid-area: b1;
-}
-
-.txtAnimacion1 {
+.animacionInicial {
   opacity: 0;
   transform: translateY(3rem);
-  animation: mover 2s ease 0.5s forwards;
-}
-
-.txtAnimacion2 {
-  opacity: 0;
-  transform: translateY(3rem);
-  animation: mover 2s ease 1.5s forwards;
-}
-
-.txtAnimacion3 {
-  opacity: 0;
-  transform: translateY(3rem);
-  animation: mover 2s ease 2.5s forwards;
 }
 
 @keyframes mover {
@@ -143,11 +118,44 @@ footer {
   }
 }
 
-#grillaProductos {
-  display: grid;
+.animacionInicial1 {
+  @include formatoAniInicial($colorRojo, a1);
+  @extend .animacionInicial;
+  animation: mover 2s ease 0.5s forwards;
+}
+
+.animacionInicial2 {
+  @include formatoAniInicial($colorGrisMed, a2);
+  @extend .animacionInicial;
+  animation: mover 2s ease 1.5s forwards;
+}
+
+.animacionInicial3 {
+  @include formatoAniInicial($colorAzulOsc, a3);
+  @extend .animacionInicial;
+  animation: mover 2s ease 2.5s forwards;
+}
+
+#imgAni {
+  display: flex;
+  justify-content: center;
+  grid-area: b1;
 }
 
 /*--- Animación Flip Productos ---*/
+
+.productos {
+  h1 {
+    font-family: $fuente;
+    color: $colorRojo;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+#grillaProductos {
+  display: grid;
+}
 
 .flip-card-1 {
   position: relative;
@@ -198,7 +206,6 @@ footer {
   flex-direction: column;
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 2.3vh;
 }
 
 /*---  Principal Nosotros ---*/
@@ -215,10 +222,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.titPrincipal div h3 {
-  color: $colorBlanco;
 }
 
 #grillaHistoria {
@@ -276,6 +279,7 @@ footer {
   display: flex;
   align-items: center;
 }
+
 /*--- Mobile ----*/
 @media only screen and (max-width: 600px) {
   .direccion {
@@ -285,7 +289,7 @@ footer {
   .direccion4 {
     display: flex;
   }
-  h3 {
+  h1 {
     font-size: 6vw;
   }
 
@@ -294,13 +298,19 @@ footer {
     text-align: center;
   }
 
+  .productos {
+    h1 {
+      font-size: 6vw;
+    }
+  }
+
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  /*--- Principal  Index --- */
 
+  /*Inicio*/
   .container-fluid {
     width: 100vw;
     height: auto;
@@ -360,14 +370,22 @@ footer {
     margin-bottom: 20px;
   }
 
-  /*--- Principal-Nosotros --- */
+  .info1 {
+    .titulo {
+      font-size: 7vw;
+      color: $colorGrisAzu;
+    }
+    .texto {
+      font-size: 5vw;
+    }
+    padding-left: 2rem;
+  }
+
+  /*Nosotros */
 
   #titEmpresa {
     div {
-      background-image: url("../img/img_tit_empresa1.jpg");
-      h3 {
-        font-size: 7vw;
-      }
+      background-image: url("../img/img_tit_empresa1.png");
     }
   }
 
@@ -407,13 +425,9 @@ footer {
     font-size: 3.5vw;
   }
 
-  /*--- Principal Catalogo ---*/
+  /* Catalogo */
   #titCatalogo div {
-    background-image: url("../img/img_tit_catalogo1.jpg");
-  }
-
-  #titCatalogo div h3 {
-    font-size: 7vw;
+    background-image: url("../img/img_tit_catalogo1.png");
   }
 
   .articulos {
@@ -469,13 +483,11 @@ footer {
     height: 5%;
   }
 
-  /*--- Principal-Promociones --- */
+  /* Principal-Promociones */
   #titPromociones div {
-    background-image: url("../img/img_tit_promociones1.jpg");
+    background-image: url("../img/img_tit_promociones1.png");
   }
-  #titPromociones div h3 {
-    font-size: 7vw;
-  }
+
   #promoDest {
     width: 100%;
     height: 160px;
@@ -488,13 +500,10 @@ footer {
     row-gap: 10px;
   }
 
-  /*--- Principal Contacto ---*/
+  /* Principal Contacto */
 
   #titContacto div {
-    background-image: url("../img/img_tit_contacto1.jpg");
-  }
-  #titContacto div h3 {
-    font-size: 7vw;
+    background-image: url("../img/img_tit_contacto1.png");
   }
 
   .contacto {
@@ -570,8 +579,15 @@ footer {
   .direccion {
     display: flex;
   }
-  h3 {
-    font-size: 1.7vw;
+
+  h1 {
+    font-size: 2.5vw;
+  }
+
+  .productos {
+    h1 {
+      font-size: 1.8vw;
+    }
   }
 
   footer {
@@ -585,8 +601,7 @@ footer {
     display: flex;
   }
 
-  /*---  Principal Index --- */
-
+  /* Inicio */
   .container-fluid {
     width: 41vw;
     height: auto;
@@ -639,14 +654,21 @@ footer {
     align-items: center;
   }
 
-  /*--- Prncipal Nosotros ---*/
+  .info1 {
+    .titulo {
+      font-size: 1.1vw;
+      color: $colorGrisAzu;
+    }
+    .texto {
+      font-size: 1vw;
+    }
+  }
+
+  /* Prncipal Nosotros */
 
   #titEmpresa {
     div {
-      background-image: url("../img/img_tit_empresa1.jpg");
-      h3 {
-        font-size: 2.5vw;
-      }
+      background-image: url("../img/img_tit_empresa1.png");
     }
   }
 
@@ -681,12 +703,9 @@ footer {
     font-size: 1.1vw;
   }
 
-  /*--- Principal Catalogo ---*/
+  /* Principal Catalogo */
   #titCatalogo div {
-    background-image: url("../img/img_tit_catalogo.jpg");
-  }
-  #titCatalogo div h3 {
-    font-size: 2.5vw;
+    background-image: url("../img/img_tit_catalogo.png");
   }
 
   #griBtnArticulos {
@@ -751,12 +770,9 @@ footer {
     height: 20%;
   }
 
-  /*--- Principal Promociones ---*/
+  /* Promociones */
   #titPromociones div {
-    background-image: url("../img/img_tit_promociones.jpg");
-  }
-  #titPromociones div h3 {
-    font-size: 2.5vw;
+    background-image: url("../img/img_tit_promociones.png");
   }
 
   .promosMensuales {
@@ -765,12 +781,9 @@ footer {
     justify-content: space-evenly;
   }
 
-  /*--- Principal Contacto ---*/
+  /* Contacto */
   #titContacto div {
-    background-image: url("../img/img_tit_contacto.jpg");
-  }
-  #titContacto div h3 {
-    font-size: 2.5vw;
+    background-image: url("../img/img_tit_contacto.png");
   }
 
   .formulario {
