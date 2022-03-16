@@ -1,0 +1,87 @@
+.imgContenedor {
+  width: 100%;
+  height: 100%;
+}
+
+.flexContenedor {
+  display: flex;
+}
+
+.fondoMain {
+  background-color: $colorGrisClaro;
+}
+
+.seccionesPad {
+  padding: 2rem 1rem;
+}
+
+.titPrincipal {
+  div {
+    width: 100%;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.animacionInicial {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+.cargar {
+  animation: carga ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.flip-card-1 {
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+  perspective: 10rem;
+  transform-style: flat;
+  transform-style: preserve-3d;
+}
+
+.flip-card-1:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+.flip-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+  backface-visibility: hidden;
+}
+
+.flip-front {
+  transform: rotateY(0deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.datosContacto2 {
+  display: flex;
+  align-items: center;
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+}

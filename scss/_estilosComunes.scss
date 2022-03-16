@@ -1,0 +1,38 @@
+.bg-fondoBar {
+  background-color: $celesteFondoEnc;
+}
+
+h1 {
+  color: $colorBlanco;
+  font-family: $fuente;
+  font-size: 2.5vw;
+}
+
+h2 {
+  font-family: $fuente;
+  color: $colorRojo;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  background-color: $colorGris;
+  color: $colorAzulOsc;
+  font-family: $fuente;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 0px;
+}
+
+footer {
+  padding: 1rem;
+  background-color: $celesteFondoEnc;
+  color: $colorGris;
+  font-family: $fuente;
+}

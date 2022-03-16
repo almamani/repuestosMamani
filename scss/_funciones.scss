@@ -1,0 +1,30 @@
+/*--- Animación Inicial ---*/
+
+@mixin formatoAniInicial($color, $area) {
+  text-align: center;
+  color: $color;
+  grid-area: $area;
+}
+
+@keyframes mover {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*--- Animación Encabezado ---*/
+
+@keyframes carga {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
