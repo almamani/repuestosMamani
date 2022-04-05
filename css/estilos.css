@@ -242,6 +242,7 @@ footer {
   .promos {
     display: none; }
   .infoContacto {
+    margin-top: 2rem;
     display: grid;
     width: 75%;
     margin-left: auto;
