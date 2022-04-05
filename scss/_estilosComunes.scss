@@ -4,15 +4,18 @@
 
 h1 {
   color: $colorBlanco;
-  font-family: $fuente;
   font-size: 2.5vw;
+  font-family: $fuente;
 }
 
 h2 {
-  font-family: $fuente;
   color: $colorRojo;
   padding: 1.5rem;
   text-align: center;
+}
+
+h4 {
+  color: $colorGrisAzu;
 }
 
 ul {
@@ -22,17 +25,17 @@ ul {
 header {
   background-color: $colorGris;
   color: $colorAzulOsc;
-  font-family: $fuente;
+  top: 0px;
   height: 4vh;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  top: 0px;
 }
 
 footer {
-  padding: 1rem;
   background-color: $celesteFondoEnc;
   color: $colorGris;
-  font-family: $fuente;
+  padding: 1rem;
 }

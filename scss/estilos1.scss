@@ -8,29 +8,45 @@
 /*------------------ Principal Inicio ------------------------*/
 
 /*--- Animación Inicial ---*/
+.fondoAni {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/img_fondo_animacion.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#grillaAnimacion {
+  display: grid;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3vw;
+  grid-template-areas:
+    "a1"
+    "a2"
+    "a3";
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .animacionInicial1 {
-  @include formatoAniInicial($colorRojo, a1);
+  @include formatoAniInicial($colorGrisAni, a1);
   @extend .animacionInicial;
   animation: mover 2s ease 0.5s forwards;
 }
 
 .animacionInicial2 {
-  @include formatoAniInicial($colorGrisMed, a2);
+  @include formatoAniInicial($colorRojoAni, a2);
   @extend .animacionInicial;
   animation: mover 2s ease 1.5s forwards;
 }
 
 .animacionInicial3 {
-  @include formatoAniInicial($colorAzulOsc, a3);
+  @include formatoAniInicial($colorAzulAni, a3);
   @extend .animacionInicial;
   animation: mover 2s ease 2.5s forwards;
-}
-
-#imgAni {
-  display: flex;
-  justify-content: center;
-  grid-area: b1;
 }
 
 /*--------------  Principal Nosotros ---------------*/
@@ -50,7 +66,6 @@
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -72,76 +87,66 @@
     text-align: center;
   }
 
-  .productos {
-    h1 {
-      font-size: 6vw;
-    }
-  }
-
   footer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
 
   /*Inicio*/
 
   .container-fluid {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
   #grillaAnimacion {
-    display: grid;
-    padding-top: 1rem;
-    width: 100%;
-    height: 140px;
-    background-color: #d2e6f9;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 5vw;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 33px 33px 33px;
-    grid-template-areas:
-      "a1 b1"
-      "a2 b1"
-      "a3 b1";
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 8vw;
   }
 
-  #grillaProductos {
+  .productos {
+    h1 {
+      font-family: $fuente;
+      color: $colorRojo;
+      padding: 2rem;
+      text-align: center;
+      font-size: 7vw;
+    }
+    .grillaProductos {
+      display: grid;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      row-gap: 2rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6";
+    }
+  }
+
+  .promos {
+    display: none;
+  }
+
+  .infoContacto {
     display: grid;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    row-gap: 20px;
-    grid-template-columns: 100%;
-    grid-template-rows: 180px 180px 180px 180px 180px 180px;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "foto1"
-      "foto2"
+      " foto2"
       "foto3"
-      "foto4"
-      "foto5"
-      "foto6";
-    margin-bottom: 20px;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .info1 {
-    .titulo {
-      font-size: 5.3vw;
-      color: $colorGrisAzu;
-    }
-    .texto {
-      font-size: 5vw;
-    }
+      " foto4";
+    margin-bottom: 1.5rem;
   }
 
   /*Nosotros */
@@ -202,6 +207,10 @@
     margin-right: auto;
   }
 
+  .container-fluid1 {
+    margin-bottom: 2rem;
+  }
+
   /* Promociones  */
   #titPromociones {
     div {
@@ -209,20 +218,25 @@
     }
   }
 
-  #promoDest {
-    width: 100%;
-    height: auto;
-  }
-  .promosMensuales {
+  .grillaPromociones {
+    display: grid;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2rem;
+    row-gap: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "foto1"
+      "foto2"
+      "foto3"
+      "foto4"
+      "foto5"
+      "foto6"
+      "foto7"
+      "foto8"
+      "foto9";
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   /* Principal Contacto */
@@ -242,7 +256,7 @@
   .datosContacto {
     width: 100%;
     display: flex;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $fuente;
     font-size: 16px;
     color: $colorGrisAzu;
   }
@@ -260,7 +274,7 @@
     padding-right: 2rem;
     max-width: 650px;
     border-radius: 3px;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $fuente;
     font-size: 15px;
 
     .formLabel {
@@ -293,6 +307,223 @@
   }
 }
 
+/*---------------------- Tablet -----------------------------------*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  h1 {
+    font-size: 5vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+  /* Inicio */
+  #grillaAnimacion {
+    font-size: 7vw;
+  }
+
+  .productos {
+    h1 {
+      font-family: $fuente;
+      color: $colorRojo;
+      padding: 2rem;
+      text-align: center;
+      font-size: 4vw;
+    }
+
+    .grillaProductos {
+      display: grid;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      row-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "foto1 foto2"
+        "foto3 foto4"
+        "foto5 foto6";
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  .promos {
+    width: 100vw;
+  }
+
+  .infoContacto {
+    display: grid;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "foto1 foto2"
+      "foto3 foto4";
+    margin-bottom: 1.5rem;
+  }
+
+  /* Nosotros */
+
+  #titEmpresa {
+    div {
+      background-image: url("../img/img_tit_empresa1.png");
+    }
+  }
+
+  #grillaHistoria {
+    display: grid;
+    margin-top: 20px;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $colorBlanco;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 454px 454px;
+    grid-template-areas:
+      "a1 b1"
+      "a2 b2";
+    padding: 1rem;
+    column-gap: 0.7rem;
+  }
+
+  #fotNosotros1 {
+    grid-area: a1;
+  }
+  #txtNosotros1 {
+    grid-area: b1;
+  }
+  #txtNosotros2 {
+    grid-area: a2;
+  }
+  #fotNosotros2 {
+    grid-area: b2;
+  }
+  .textoHistoria {
+    font-size: 1.8vw;
+  }
+
+  /* Catalogo */
+  #titCatalogo {
+    div {
+      background-image: url("../img/img_tit_catalogo.png");
+    }
+  }
+  .articulos {
+    background-color: $colorBlanco;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-fluid1 {
+    width: 95vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Promociones */
+  #titPromociones {
+    div {
+      background-image: url("../img/img_tit_promociones.png");
+    }
+  }
+
+  .grillaPromociones {
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "foto1 foto2"
+      "foto3 foto4"
+      "foto5 foto6"
+      "foto7 foto8"
+      "foto9";
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* Contacto */
+  #titContacto {
+    div {
+      background-image: url("../img/img_tit_contacto.png");
+    }
+  }
+
+  .formulario {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacto {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .datosContacto {
+    width: 40%;
+    display: flex;
+    font-family: $fuente;
+    font-size: 18px;
+    color: $colorAzulOsc;
+  }
+
+  .form {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: rgba(6, 60, 95, 0.5);
+    max-width: 650px;
+    border-radius: 3px;
+    font-family: $fuente;
+    font-size: 14px;
+
+    .formLabel {
+      display: block;
+      font-size: 18px;
+      color: $colorBlanco;
+    }
+
+    .formInput {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    .formConsulta {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    .formSubmit {
+      width: 100%;
+      font-size: 18px;
+      padding: 15px;
+      background-color: $colorGris;
+      color: $colorAzulOsc;
+    }
+  }
+}
+
 /*---------------------- Desktop -----------------------------------*/
 @media only screen and (min-width: 992px) {
   /*Estilos comunes*/
@@ -301,39 +532,18 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 1rem;
   }
 
   /* Inicio */
+  #grillaAnimacion {
+    font-size: 3vw;
+  }
   .container-fluid {
     width: 41vw;
     height: auto;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .container-fluid1 {
-    width: 43vw;
-    height: auto;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  #grillaAnimacion {
-    padding-top: 2rem;
-    display: grid;
-    width: 70%;
-    height: 350px;
-    background-color: #d2e6f9;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 50px;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 100px 100px 100px;
-    grid-template-areas:
-      "a1 b1"
-      "a2 b1"
-      "a3 b1";
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .productos {
@@ -344,39 +554,31 @@
       text-align: center;
       font-size: 1.8vw;
     }
+
+    .grillaProductos {
+      display: grid;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      row-gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "foto1 foto2 foto3"
+        " foto4 foto5 foto6";
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
-  #grillaProductos {
+  .infoContacto {
     display: grid;
-    width: 1110px;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
-    row-gap: 30px;
-    column-gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 200px;
-    grid-template-areas:
-      "foto1 foto2 foto3"
-      " foto4 foto5 foto6";
-    margin-bottom: 20px;
-  }
-
-  .info {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .info1 {
-    .titulo {
-      font-size: 1.1vw;
-      color: $colorGrisAzu;
-    }
-    .texto {
-      font-size: 1vw;
-    }
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "foto1 foto2 foto3 foto4";
+    margin-bottom: 1.5rem;
   }
 
   /* Nosotros */
@@ -427,9 +629,17 @@
   }
   .articulos {
     background-color: $colorBlanco;
-    width: 1000px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .container-fluid1 {
+    width: 43vw;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
   }
 
   /* Promociones */
@@ -439,10 +649,20 @@
     }
   }
 
-  .promosMensuales {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  .grillaPromociones {
+    display: grid;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 3rem;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "foto1 foto2 foto3"
+      "foto4 foto5 foto6"
+      "foto7 foto8 foto9";
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   /* Contacto */
@@ -472,7 +692,7 @@
   .datosContacto {
     width: 40%;
     display: flex;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $fuente;
     font-size: 18px;
     color: $colorAzulOsc;
   }
@@ -485,7 +705,7 @@
     background: rgba(6, 60, 95, 0.5);
     max-width: 650px;
     border-radius: 3px;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $fuente;
     font-size: 14px;
 
     .formLabel {
@@ -510,9 +730,9 @@
 
     .formSubmit {
       width: 100%;
-      font-size: 16px;
+      font-size: 18px;
       padding: 15px;
-      background-color: $colorGrisClaro;
+      background-color: $colorGris;
       color: $colorAzulOsc;
     }
   }

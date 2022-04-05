@@ -3,6 +3,16 @@
   height: 100%;
 }
 
+.icoInfo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.espacioBlanco {
+  padding-left: 0.2rem;
+  padding-bottom: 0.5rem;
+}
+
 .flexContenedor {
   display: flex;
 }
@@ -12,7 +22,7 @@
 }
 
 .seccionesPad {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .titPrincipal {
@@ -38,40 +48,16 @@
   animation-fill-mode: forwards;
 }
 
-.flip-card-1 {
-  position: relative;
-  cursor: pointer;
-  transition: transform 1s ease-in-out;
-  perspective: 10rem;
-  transform-style: flat;
-  transform-style: preserve-3d;
+.aProductos img:last-child {
+  display: none;
 }
 
-.flip-card-1:hover {
-  transform: rotateY(180deg);
+.aProductos:hover img:last-child {
+  display: inherit;
 }
 
-.flip-card-1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50%;
-}
-
-.flip-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: visible;
-  backface-visibility: hidden;
-}
-
-.flip-front {
-  transform: rotateY(0deg);
-}
-
-.flip-back {
-  transform: rotateY(180deg);
+.aProductos:hover img:first-child {
+  display: none;
 }
 
 .datosContacto2 {
@@ -79,9 +65,36 @@
   align-items: center;
 }
 
-.info1 {
+.tarjetaInfo {
+  padding: 2rem;
+  width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  color: $colorGrisAzu;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  .txtInfo {
+    font-size: 1.1rem;
+  }
+}
+
+.promo {
+  position: relative;
+  width: 300px;
+  .promoPorcentaje {
+    position: absolute;
+    top: 0;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: $colorRojo;
+    font-size: 1.5rem;
+    padding-left: 0.8rem;
+    padding-top: 1rem;
+  }
+  .promoArticulo {
+    font-family: $fuente;
+    font-size: 1.2rem;
+    color: $colorAzulOsc;
+  }
 }

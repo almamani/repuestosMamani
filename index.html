@@ -31,12 +31,12 @@
   <header>
     <div class="flexContenedor">
       <div><i class="bi bi-telephone-fill"></i></div>
-      <div>0351-4258362</div>
+      <div class="espacioBlanco">0351-4258362</div>
     </div>
 
     <div class="flexContenedor direccion">
       <div><i class="bi bi-geo-alt-fill"></i></div>
-      <div>Humberto Primo 785 - Córdoba - Argentina</div>
+      <div class="espacioBlanco">Humberto Primo 785 - Córdoba - Argentina</div>
     </div>
   </header>
 
@@ -78,137 +78,128 @@
 
     <!------Animacion--------->
     <seccion class="animacion">
-      <div id="grillaAnimacion">
-        <div class="animacionInicial1">
-          <p>La más completa línea</p>
+      <div class="fondoAni">
+        <div id="grillaAnimacion">
+          <div class="animacionInicial1">
+            La más completa línea
+          </div>
+          <div class="animacionInicial2">
+            de repuestos y accesorios
+          </div>
+          <div class="animacionInicial3">
+            para el AGRO y la INDUSTRIA
+          </div>
         </div>
-        <div class="animacionInicial2">
-          <p>de repuestos y accesorios</p>
-        </div>
-        <div class="animacionInicial3">
-          <p>para el AGRO y la INDUSTRIA</p>
-        </div>
-        <div id="imgAni"><img src="img/img_prod_animacion.png" alt="animacion" class="imgContenedor"></div>
       </div>
     </seccion>
 
     <!---------- Productos --------->
     <seccion class="productos">
-      <h1>/// Nuestros Productos</h1>
-      <div id="grillaProductos">
+      <h1>Nuestros Productos</h1>
 
-        <article id="acoples" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_acoples.png" alt="acoples">
-          </div>
-          <div class="flip-face flip-back">
-            <img src="img/img_acoples1.png" alt="acoples">
-          </div>
-        </article>
-
-        <article id="cadenas" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_cadenas.png" alt="cadenas">
-          </div>
-          <div class="flip-face flip-back">
+      <div class="grillaProductos">
+        <article id="cadenas">
+          <a href="./html/catalogo.html#cadenasCat" class="aProductos">
             <img src="img/img_cadenas1.png" alt="cadenas">
-          </div>
+            <img src="img/img_cadenas2.png" alt="cadenas">
+          </a>
         </article>
 
-        <article id="coronas" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_coronas.png" alt="coronas">
-          </div>
-          <div class="flip-face flip-back">
-            <img src="img/img_coronas1.png" alt="coronas">
-          </div>
+        <article id="transmisiones">
+          <a href="./html/catalogo.html#transmisionesCat" class="aProductos">
+            <img src="img/img_transm_cardanicas1.png" alt="tranmisiones cardanicas">
+            <img src="img/img_transm_cardanicas2.png" alt="tranmisiones cardanicas">
+          </a>
         </article>
 
-        <article id="crucetas" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_crucetas.png" alt="crucetas">
-          </div>
-          <div class="flip-face flip-back">
+        <article id="crucetas">
+          <a href="./html/catalogo.html#crucetasCat" class="aProductos">
             <img src="img/img_crucetas1.png" alt="crucetas">
-          </div>
+            <img src="img/img_crucetas2.png" alt="crucetas">
+          </a>
         </article>
 
-        <article id="correas" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_correas.png" alt="correas">
-          </div>
-          <div class="flip-face flip-back">
+        <article id="correas">
+          <a href="./html/catalogo.html#correasCat" class="aProductos">
             <img src="img/img_correas1.png" alt="correas">
-          </div>
+            <img src="img/img_correas2.png" alt="correas">
+          </a>
         </article>
 
-        <article id="cuchillas" class="flip-card-1">
-          <div class="flip-face flip-front">
-            <img src="img/img_cuchillas.png" alt="cuchillas">
-          </div>
-          <div class="flip-face flip-back">
-            <img src="img/img_cuchillas1.png" alt="cuchillas">
-          </div>
+        <article id="poleas">
+          <a href="./html/catalogo.html#poleasCat" class="aProductos">
+            <img src="img/img_poleas1.png" alt="poleas">
+            <img src="img/img_poleas2.png" alt="poleas">
+          </a>
+        </article>
+
+        <article id="engranajes">
+          <a href="./html/catalogo.html#coronasCat" class="aProductos">
+            <img src="img/img_engranajes1.png" alt="engranajes">
+            <img src="img/img_engranajes2.png" alt="engranajes">
+          </a>
         </article>
       </div>
     </seccion>
 
     <!--------Promociones--------------->
-    <div class="container-fluid seccionesPad">
 
-      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <seccion class="promos seccionesPad ">
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="3000">
-            <img src="img/img_promo_maiceras.png" class="d-block w-100" alt="promo cadenas maiceras">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/img_promo_edma.png" class="d-block w-100" alt="promo edma">
+          <div class="carousel-item active">
+            <img src="img/promo_edma.png" class="d-block w-100" alt="promocion tranmisiones">
           </div>
           <div class="carousel-item">
-            <img src="img/img_promo_trilobato.png" class="d-block w-100" alt="promo trilobatos">
+            <img src="img/promo_maiceras.png" class="d-block w-100" alt="promocion maiceras">
           </div>
+          <div class="carousel-item">
+            <img src="img/promo_nth.png" class="d-block w-100" alt="promocion tanzas">
+          </div>
+
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
           data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
+
+    </seccion>
+
 
     <!--Información de Contacto-->
     <seccion class="info seccionesPad">
-      <div class="info1">
-        <img src="img/img_horario.png" alt="horarios">
-        <p class="titulo">Horarios </p>
-        <p class="texto">8:30 a 18:30 hs</p>
-      </div>
-      <div class=" info1">
-        <img src="img/img_envio.png" alt="envios paquetes" class="imgContenedor">
-        <p class="titulo">Envíos</p>
-        <p class="texto">Todo el País</p>
-      </div>
-      <div class="info1">
-        <img src="img/img_telefono1.png" alt="telefono" class="imgContenedor">
-        <p class="titulo">Teléfono</p>
-        <p class="texto">0351-4258362</p>
-      </div>
-      <div class="info1">
-        <img src="img/img_whatsaap1.png" alt="whatsaap" class="imgContenedor">
-        <p class="titulo">Whatsapp</p>
-        <p class="texto">Con un vendedor
-        </p>
-      </div>
-      <div class="info1">
-        <img src="img/img_email.png" alt="email" class="imgContenedor">
-        <p class="titulo">Contacto</p>
-        <p class="texto">Escribinos
-        </p>
+      <div class="infoContacto">
+        <article id="infoEnvios" class="tarjetaInfo">
+          <div class="icoInfo"><img src="img/img_envio.png" alt="envio" class="imgContenedor"></div>
+          <h4>ENVÍOS</h4>
+          <p class="txtInfo">Todo el país</p>
+        </article>
+
+        <article id="infoTelefono" class="tarjetaInfo">
+          <div class="icoInfo"><img src="img/img_telefono1.png" alt="telefono" class="imgContenedor"></div>
+          <h4>TELÉFONO</h4>
+          <p class="txtInfo">0351-4258362</p>
+        </article>
+
+        <article id="InfoWhatsapp" class="tarjetaInfo">
+          <div class="icoInfo"><img src="img/img_whatsaap1.png" alt="whatsapp" class="imgContenedor"></div>
+          <h4>WHATSAPP</h4>
+          <p class="txtInfo">0351-3885829</p>
+        </article>
+
+        <article id="infoEmail" class="tarjetaInfo">
+          <div class="icoInfo"><img src="img/img_email.png" alt="whatsapp" class="imgContenedor"></div>
+          <h4>E-MAIL</h4>
+          <p class="txtInfo">crucecor@crucecor.com.ar</p>
+        </article>
       </div>
     </seccion>
 
@@ -217,24 +208,31 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.2552899352454!2d-64.19451818431281!3d-31.407091702946225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432987db1d3c7e5%3A0x49118c4dbc1ce937!2sCruce%20-%20Cor!5e0!3m2!1ses-419!2sar!4v1644064724435!5m2!1ses-419!2sar"
         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
     </seccion>
+
   </main>
 
   <!------------------------------ Pié de Página ------------------------>
   <footer>
     <div class="flexContenedor">
       <div><i class="bi bi-telephone-fill"></i></div>
-      <div>0351-4258362</div>
+      <div class="espacioBlanco">0351-4258362</div>
     </div>
 
     <div class="flexContenedor">
       <div><i class="bi bi-whatsapp"></i></div>
-      <div>351-3885829</div>
+      <div class="espacioBlanco">351-3885829</div>
+    </div>
+
+    <div class="flexContenedor">
+      <div><i class="bi bi-clock"></i></div>
+      <div class="espacioBlanco">Lun a Vie 08:30 a 18:30 hs-Sab 08:30 a 12:30 hs </div>
     </div>
 
     <div class="flexContenedor">
       <div><i class="bi bi-geo-alt-fill"></i></div>
-      <div>Humberto Primo 785 - Córdoba - Argentina</div>
+      <div class="espacioBlanco">Humberto Primo 785 - Córdoba - Argentina</div>
     </div>
 
     <div class="dataFiscal">
